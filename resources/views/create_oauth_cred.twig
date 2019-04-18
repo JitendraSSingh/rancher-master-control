@@ -1,0 +1,26 @@
+{% extends 'app.twig' %}
+
+{% block content %}
+<!-- Page Heading -->
+<div class="row" id="main">
+    <div class="col-sm-12 col-md-12 well" id="content">
+        <h1>Create OAuth Credentials</h1>
+    </div>
+</div>
+<div class="row">
+	<div class="col-sm-12 col-md-6 col-lg-6">
+		<form>
+			{% set clientOAuthCreds = flash.getMessage('clientOAuthCreds') | first %}
+			<div class="form-group">
+			<label for="client_id">Client ID:</label>
+			<input type="text" name="client_id" id="client_id" class="form-control" disabled="disabled" value="{{ clientOAuthCreds.clientId }}">
+			</div>
+
+			<div class="form-group">
+			<label for="client_secret">Client Secret:</label>
+			<input type="text" name="client_secret" id="client_secret" class="form-control" disabled="disabled" value="{{ clientOAuthCreds.clientSecret }}">
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}	

@@ -1,0 +1,9 @@
+<div class="col-sm-2 sidenav hidden-xs admin-sidenav">
+
+      <ul class="nav nav-pills nav-stacked">
+        <li class=""><a href="#section1">Websites</a></li>
+        <li><a href="#section2">Namespaces</a></li>
+        <li><a href="#section3">OAuth2.0 Users</a></li>
+        <li class="{% if currentUrl == path_for('admin.createcredentials') %}active {% endif %}"><a href="{{ path_for('admin.createcredentials') }}">Generate User OAuth Credentials</a></li>
+      </ul>
+</div>
